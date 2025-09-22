@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio de Stage – Accueil</title>
+    <meta name="description" content="Blog de rapport d’activité B2 – Présentation des réalisations de stage.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="index.html" aria-label="Accueil">
+                <span class="logo" aria-hidden="true"></span>
+                <span>Blog Quentin Guillaume</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a class="active" href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="feed">
+                <div class="feed-col">
+                    <a href="effidic.html" class="post-card post-card-link">
+                        <h2 class="post-title-white">Stagiaire Data/BI – Effidic</h2>
+                        <div class="meta">Angers, France · 21/07/2025 → 25/07/2025 · 1 semaine</div>
+                        <p class="excerpt">Stage d’observation et de formation au sein d’Effidic (Data/BI). Entraînement sur un dataset interne “Formule 1”.</p>
+                        <div class="post-media">
+                            <img src="assets/img/Power bi f1 (2).png" alt="Capture Power BI – Formule 1" />
+                            <img src="assets/img/vs code dbt.png" alt="VS Code – Projet dbt" />
+                            <img src="assets/img/image db.png" alt="Schéma de base de données" />
+                        </div>
+                        <div class="actions">
+                        </div>
+                    </a>
+                </div>
+                <div style="height:32px;"></div>
+                <div class="feed-col">
+                    <div class="post-card post-card-link" style="text-align:center;opacity:0.7;">
+                        <h2 style="color:#fff;">Prochain contenu bientôt disponible</h2>
+                        <p class="excerpt">Restez connecté pour découvrir les prochaines réalisations et articles !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <small>© <span id="year"></span> Mon Blog de Stage – Tous droits réservés</small>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
+
+

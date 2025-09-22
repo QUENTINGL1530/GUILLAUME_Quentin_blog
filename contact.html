@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="Formulaire de contact pour me joindre.">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="index.html" aria-label="Accueil">
+                <span class="logo" aria-hidden="true"></span>
+                <span>Blog Quentin Guillaume</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container two-col">
+            <section class="card">
+                <h1>Contact</h1>
+                <p class="muted">Remplissez le formulaire pour me contacter. Les champs marqués * sont obligatoires.</p>
+                <form 
+    action="https://formspree.io/f/xgvnwroj" 
+    method="POST" 
+    enctype="multipart/form-data" 
+    novalidate
+>
+    <label for="name">Nom *</label>
+    <input id="name" name="name" type="text" placeholder="Votre nom" required>
+
+    <label for="email">Email *</label>
+    <input id="email" name="email" type="email" placeholder="vous@example.com" required>
+
+    <label for="subject">Sujet</label>
+    <input id="subject" name="subject" type="text" placeholder="Sujet de votre message">
+
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" rows="6" placeholder="Votre message" required></textarea>
+
+    <label for="upload">Fichier (optionnel)</label>
+    <input id="upload" name="upload" type="file">
+
+    <button class="btn" type="submit">Envoyer</button>
+</form>
+            </section>
+            <aside class="sidebar">
+                <div class="card widget">
+                    <h3>Réseaux</h3>
+                    <p>
+                        <a class="pill" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <small>© <span id="year"></span> Mon Blog de Stage</small>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+

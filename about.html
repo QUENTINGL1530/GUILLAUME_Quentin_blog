@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>À propos – CV et Parcours</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="CV, parcours et liens professionnels.">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="index.html" aria-label="Accueil">
+                <span class="logo" aria-hidden="true"></span>
+                <span>Blog Quentin Guillaume</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a class="active" href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container stack-12">
+            <section class="card">
+                <h1>À propos de moi</h1>
+                <h2>CV</h2>
+                <div class="card card-spaced" style="padding: 0; overflow: hidden; width: min(100%, 820px); margin: 0 auto;">
+                  <img src="assets/img/cv-preview.jpg" alt="Aperçu du CV de Quentin Guillaume" style="display:block; width:100%; height:auto;" />
+                </div>
+                <p style="margin-top: 10px;">
+                  <a class="pill" href="assets/cv/CV quentin colbert.pdf" download="CV_Quentin_Guillaume.pdf">Télécharger mon CV (PDF)</a>
+                </p>
+            </section>
+            <section class="card card--no-chrome card-spaced">
+                <h2>Mon parcours</h2>
+                <div class="timeline2">
+                  <ul>
+                    <li>
+                      <div>
+                        <time>2020</time> Obtention du baccalauréat scientifique option SVT
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <time>2023</time> Obtention du Diplome d'assistant spécialisé Vétérinaire à l'école Supvéto Nantes 
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <time>2023</time> Reconversion professionnelle en informatique à Ynov Nantes.
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <time>2025</time> Stage d'observation d'une semaine chez Effidic à Angers
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <time>2025</time> Entrée en 3ème année d'informatique spécialité Data/IA à Ynov Nantes pour valider mon bachelor
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+            </section>
+            <section class="card card-spaced">
+                <h2>Passions</h2>
+                <p class="muted">Quelques une de mes passions qui me suivent au quotidien :</p>
+                <div class="gallery">
+                    <figure class="gallery-item">
+                        <img src="assets/img/FC-Barcelone.jpg" alt="Football – FC Barcelone" />
+                        <figcaption>FC Barcelone</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="assets/img/pc gamer.avif" alt="Informatique – PC gamer et hardware" />
+                        <figcaption>Informatique – hardware</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="assets/img/outils-sport_53876-138077.jpg" alt="Sport et bien-être" />
+                        <figcaption>Sport : Judo/ Foot / Escalade / tennis / Volley</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="card card-spaced">
+                <h2>Liens Utiles</h2>
+                <p>
+                    <a class="pill" href="https://www.linkedin.com/in/quentin-guillaume-06544631a" target="_blank" rel="noopener">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="currentColor" d="M20.451 20.451h-3.554v-5.569c0-1.329-.024-3.039-1.852-3.039-1.853 0-2.136 1.447-2.136 2.944v5.664H9.356V9h3.414v1.561h.048c.476-.9 1.64-1.852 3.377-1.852 3.611 0 4.279 2.377 4.279 5.468v6.274zM5.337 7.433a2.063 2.063 0 1 1 0-4.126 2.063 2.063 0 0 1 0 4.126zM7.114 20.451H3.556V9h3.558v11.451zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        LinkedIn – Quentin Guillaume
+                    </a>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <small>© <span id="year"></span> Mon Blog de Stage</small>
+        </div>
+    </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+    <script>
+        (function() {
+          'use strict';
+          var timelines = document.querySelectorAll('.timeline2');
+          function debounce(func, wait, immediate) {
+            var timeout;
+            return function() {
+              var context = this, args = arguments;
+              var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+              };
+              var callNow = immediate && !timeout;
+              clearTimeout(timeout);
+              timeout = setTimeout(later, wait);
+              if (callNow) func.apply(context, args);
+            };
+          }
+          function callbackFunc() {
+            var h, timeline, li, rect, parent_rect, i, items;
+            for (h = 0; h < timelines.length; h++) {
+              timeline = timelines[h];
+              parent_rect = timeline.getBoundingClientRect();
+              items = timeline.querySelectorAll('.timeline2 li');
+              for (i = 0; i < items.length; i++) {
+                li = items[i];
+                rect = li.getBoundingClientRect();
+                if ((rect.bottom <= (parent_rect.top + (rect.height / 2))) || (rect.top >= (parent_rect.bottom - (rect.height / 2)))) {
+                  li.classList.remove('in-view');
+                } else {
+                  li.classList.add('in-view');
+                }
+              }
+            }
+          }
+          var updateLayout = debounce(function() { callbackFunc(); }, 500);
+          window.addEventListener('load', callbackFunc);
+          window.addEventListener('resize', updateLayout);
+          window.addEventListener('scroll', callbackFunc);
+          for (var h = 0; h < timelines.length; h++) {
+            var timeline = timelines[h];
+            timeline.addEventListener('scroll', callbackFunc);
+          }
+        })();
+    </script>
+</body>
+</html>
+
+
